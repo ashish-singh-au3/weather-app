@@ -1,0 +1,198 @@
+.weatherInfo {
+  max-width: 800px;
+  background-color: #fff;
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #333;
+  transform: translateX(-10px);
+  opacity: 0;
+  animation-name: showIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.weatherInfo .dataBox {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.weatherInfo .fetch-info {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  width: 100%;
+}
+
+.weatherInfo h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 40px;
+  flex: 0 0 100%;
+  padding: 10px 0 10px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+.weatherInfo .mainWeather {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  will-change: auto;
+}
+
+.weatherInfo .mainWeather .singleBox {
+  flex: 0 0 20%;
+  border-left: 1px solid #eee;
+}
+
+.weatherInfo .mainWeather .singleBox span {
+  will-change: auto;
+}
+
+.weatherInfo .singleBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 20px 0;
+  will-change: auto;
+  transform: translateX(-10px);
+  opacity: 0;
+  animation-name: showIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.weatherInfo .singleBox p {
+  font-size: 16px;
+  font-family: "Cardo", serif;
+  margin: 0 0 20px;
+}
+
+.weatherInfo .singleBox span {
+  width: 100%;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.weatherInfo .sunInfo,
+.weatherInfo .weatherCond,
+.weatherInfo .currentTime {
+  flex: 0 0 33%;
+}
+
+.weatherInfo .weatherCond {
+  display: flex;
+  flex-flow: row wrap;
+  will-change: auto;
+}
+
+.weatherInfo .weatherCond .icon {
+  order: 1;
+  flex: 0 0 100%;
+}
+
+.weatherInfo .weatherCond .main {
+  order: 2;
+  flex: 0 0 50%;
+  word-break: break-word;
+  font-size: 18px;
+}
+
+.weatherInfo .weatherCond .description {
+  order: 3;
+  flex: 0 0 50%;
+}
+
+.weatherInfo .weatherCond span {
+  word-break: break-word;
+  font-size: 18px;
+}
+
+.weatherInfo .sunInfo {
+  display: flex;
+  align-content: center;
+  flex-flow: row wrap;
+  padding: 0 20px;
+  border-right: 1px solid #eee;
+  will-change: auto;
+}
+
+.weatherInfo .sunInfo .singleBox {
+  justify-content: center;
+  align-content: center;
+  flex: 0 0 100%;
+}
+
+.weatherInfo .sunInfo .singleBox span {
+  width: auto;
+}
+
+.weatherInfo .sunInfo .singleBox p {
+  margin: 0 20px 0 0;
+}
+
+.currentTime {
+  display: flex;
+  align-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  border-left: 1px solid #eee;
+  will-change: auto;
+}
+
+.currentTime .singleBox {
+  flex: 0 0 100%;
+}
+
+.windInfo {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 0 30px;
+  will-change: auto;
+}
+
+.windInfo .singleBox {
+  flex: 0 0 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .weatherInfo .sunInfo,
+  .weatherInfo .weatherCond,
+  .weatherInfo .currentTime {
+    flex: 0 0 50%;
+  }
+  .mainWeather .singleBox {
+    flex: 0 0 33%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .weatherInfo .sunInfo,
+  .weatherInfo .weatherCond,
+  .weatherInfo .currentTime {
+    flex: 0 0 100%;
+  }
+  .weatherInfo .mainWeather .singleBox {
+    flex: 0 0 50%;
+  }
+}
