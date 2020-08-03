@@ -116,7 +116,7 @@ export default class GetData extends Component {
                   {
                     data: `${this.changeTime(this.state.sunset)} p.m`,
                     name: "Sunset:",
-                    boxClass: "sunrise",
+                    boxClass: "sunset",
                   },
                 ]}
               />
@@ -130,7 +130,7 @@ export default class GetData extends Component {
                   },
                   {
                     data: this.state.weatherDesc,
-                    name: "Description:",
+                    name: "Forecast:",
                     boxClass: "description",
                   },
                   {
